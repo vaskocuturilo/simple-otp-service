@@ -1,4 +1,4 @@
-## Spring Boot OTP (One time password authentication)
+## Spring Boot OTP (One time password service)
 
 The Spring Boot project with the demonstration of OTP technique. Also added automation scripts for testing.
 
