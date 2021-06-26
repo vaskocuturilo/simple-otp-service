@@ -1,16 +1,21 @@
 package site.testengineer.otp.service;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 @Service
 public class OTPService {
 
-    public ResponseEntity<Object> getOneParameterMap() {
-        return ResponseEntity.status(HttpStatus.CREATED).body(
-                Collections.singletonMap("code", "1234"));
+    public Map<String, String> sayHello() {
+        Date date = new Date();
+        HashMap<String, String> map = new HashMap<>();
+        map.put("is_successful", "true");
+        map.put("parameter_errors", "null");
+        map.put("server_datetime", String.valueOf(date));
+        map.put("code", "1234");
+        return map;
     }
 }

@@ -17,7 +17,7 @@ public class OTPController {
     @GetMapping
     public ResponseEntity getOneTimePassword() {
         try {
-            return ResponseEntity.ok(otpService.getOneParameterMap());
+            return ResponseEntity.ok(otpService.sayHello());
         } catch (Exception exception) {
             return ResponseEntity.badRequest().body("User can't get One time password.");
         }
