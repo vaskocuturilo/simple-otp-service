@@ -1,25 +1,26 @@
 package site.testengineer.otp.controller;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 public class OneTimePassword {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Integer oneTimePasswordCode;
     private Date expires;
 
-
     public OneTimePassword() {
-
     }
 
-    public OneTimePassword(Integer oneTimePasswordCode, Date expires) {
-        this.oneTimePasswordCode = oneTimePasswordCode;
-        this.expires = expires;
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Integer getOneTimePasswordCode() {

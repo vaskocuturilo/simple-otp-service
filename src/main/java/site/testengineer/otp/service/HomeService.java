@@ -9,7 +9,7 @@ import java.util.Date;
 @Service
 public class HomeService {
 
-    private final Long expiryInterval = 5L * 60 * 1000; //5 minutes
+    private final Long expiryInterval = 5L * 60 * 1000;
 
     OneTimePasswordRepository oneTimePasswordRepository;
 
@@ -24,12 +24,13 @@ public class HomeService {
     }
 
     public OneTimePassword returnOneTimePassword() {
+        OneTimePassword oneTimePassword = new OneTimePassword();
 
-        OneTimePassword otp = new OneTimePassword();
-        otp.setOneTimePasswordCode(generateCode());
-        otp.setExpires(new Date(System.currentTimeMillis() + expiryInterval));
-        oneTimePasswordRepository.save(otp);
+        oneTimePassword.setOneTimePasswordCode(generateCode());
+        oneTimePassword.setExpires(new Date(System.currentTimeMillis() + expiryInterval));
 
-        return otp;
+        oneTimePasswordRepository.save(oneTimePassword);
+
+        return oneTimePassword;
     }
 }
