@@ -1,11 +1,10 @@
 ## Spring Boot OTP (One time password service)
 
-The Spring Boot project with the demonstration of OTP technique. Also added automation scripts for testing.
+The Spring Boot project with the demonstration of OTP technique. Also added API automation scripts for testing.
 
 ## Requirements:
 - Use any *object-oriented language*.
-- Create OTP service.  
-- Use Selenium WebDriver for web interactions
+- Create a One time password service.
 - Use automation patterns like *PageObject*, *data-driven* tests, etc.
 - Use any testing frameworks.
 - Add Report.
@@ -17,35 +16,27 @@ The Spring Boot project with the demonstration of OTP technique. Also added auto
 
 You will need the following technologies available to try it out:
 * Git
+* Mysql 
 * Spring Boot  
-* Gradle 3+
-* JDK 8
+* Gradle 7+
+* JDK 11
 * IDE of your choice
 * Web browser Chrome
 
+
+### How to work 
+
+open http://localhost:8080/api/v1/otp/create/
+
 ### Ho w to run
 
-```./gradlew clean test -Denv=test```
+```./gradlew bootStop```
 
-- [x] ability to run tests for different browsers/os by configuring;
-- [x] ability to run tests for different environments(urls) by configuring/by command-line.
+### Ho w to stop
 
-```./gradlew clean test -Denv=prod -Dbrowser=firefox```
-
-### Generate Allure report
-
-```./gradlew allureReport```
-
-### Open Allure report in browser
-
-```./gradlew allureServe```
+```gradle -stop```
 
 
-![]()
-
-![]()
-
-![]()
 
 
 
