@@ -26,7 +26,12 @@ You will need the following technologies available to try it out:
 
 ### How to work 
 
+![](https://a.radikal.ru/a27/2202/2c/f4bb9d38cf65.png)
+
 open http://localhost:8080/api/v1/otp/create/
+
+Example response:
+``` {"id":10,"oneTimePasswordCode":827836,"expires":"2022-02-06T18:03:58.267+00:00"} ```
 
 ### Ho w to run
 
