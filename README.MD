@@ -52,7 +52,11 @@ Example response:
 
 ```{"status":"UP"}```
 
+### Swagger-UI
 
+open http://localhost:8080/swagger-ui/
+
+![](https://b.radikal.ru/b13/2202/86/b1561e632230.png)
 
 
 
