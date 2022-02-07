@@ -3,6 +3,7 @@
 The Spring Boot project with the demonstration of OTP technique. Also added API automation scripts for testing.
 
 ## Requirements:
+
 - Use any *object-oriented language*.
 - Create a One time password service.
 - Use automation patterns like *PageObject*, *data-driven* tests, etc.
@@ -15,16 +16,16 @@ The Spring Boot project with the demonstration of OTP technique. Also added API 
 **Note**: Please send link to this repo when you are done.
 
 You will need the following technologies available to try it out:
+
 * Git
-* Mysql 
-* Spring Boot  
+* Mysql
+* Spring Boot
 * Gradle 7+
 * JDK 11
 * IDE of your choice
 * Web browser Chrome
 
-
-### How to work 
+### How to work
 
 ![](https://a.radikal.ru/a27/2202/2c/f4bb9d38cf65.png)
 
@@ -40,6 +41,16 @@ Example response:
 ### Ho w to stop
 
 ```gradle -stop```
+
+### Actuator
+
+* http://localhost:8081/actuator
+* http://localhost:8081/actuator/health
+* http://localhost:8081/actuator/info
+
+### http://localhost:8081/actuator/health
+
+```{"status":"UP"}```
 
 
 
