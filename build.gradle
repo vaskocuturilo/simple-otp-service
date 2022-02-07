@@ -24,6 +24,11 @@ dependencies {
     implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '4.3.1'
     testImplementation group: 'junit', name: 'junit', version: '4.13.2'
     implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.5.0'
+    implementation group: 'io.rest-assured', name: 'json-path', version: '4.5.0'
+    implementation group: 'io.rest-assured', name: 'xml-path', version: '4.5.0'
+    implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.9'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.22.0'
     implementation group: 'org.springdoc', name: 'springdoc-openapi-ui', version: '1.6.5'
 }
 
