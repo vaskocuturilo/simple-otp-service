@@ -36,7 +36,7 @@ Example response:
 
 ### Ho w to run
 
-```./gradlew bootStop```
+```./gradlew bootRun```
 
 ### Ho w to stop
 
