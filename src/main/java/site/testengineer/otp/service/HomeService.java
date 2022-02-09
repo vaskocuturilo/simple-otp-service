@@ -1,6 +1,7 @@
 package site.testengineer.otp.service;
 
 import org.springframework.stereotype.Service;
+import site.testengineer.otp.base.OneTimePasswordHelpService;
 import site.testengineer.otp.controller.OneTimePassword;
 import site.testengineer.otp.controller.OneTimePasswordRepository;
 
@@ -13,20 +14,16 @@ public class HomeService {
 
     OneTimePasswordRepository oneTimePasswordRepository;
 
+    OneTimePasswordHelpService oneTimePasswordHelpService;
+
     public HomeService(OneTimePasswordRepository oneTimePasswordRepository) {
         this.oneTimePasswordRepository = oneTimePasswordRepository;
-    }
-
-    private Integer generateCode() {
-        final Integer min = 100000;
-        final Integer max = 999999;
-        return (int) Math.floor(Math.random() * (max - min + 1) + min);
     }
 
     public OneTimePassword returnOneTimePassword() {
         OneTimePassword oneTimePassword = new OneTimePassword();
 
-        oneTimePassword.setOneTimePasswordCode(generateCode());
+        oneTimePassword.setOneTimePasswordCode(oneTimePasswordHelpService.createRandomOneTimePassword().get());
         oneTimePassword.setExpires(new Date(System.currentTimeMillis() + expiryInterval));
 
         oneTimePasswordRepository.save(oneTimePassword);
