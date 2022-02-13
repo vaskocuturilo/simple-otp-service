@@ -1,5 +1,6 @@
 package site.testengineer.otp.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import site.testengineer.otp.base.OneTimePasswordHelpService;
 import site.testengineer.otp.controller.OneTimePassword;
@@ -8,7 +9,7 @@ import site.testengineer.otp.controller.OneTimePasswordRepository;
 import java.util.Date;
 
 @Service
-public class HomeService {
+public class OneTimePasswordService {
 
     private final Long expiryInterval = 5L * 60 * 1000;
 
@@ -16,7 +17,8 @@ public class HomeService {
 
     OneTimePasswordHelpService oneTimePasswordHelpService;
 
-    public HomeService(OneTimePasswordRepository oneTimePasswordRepository) {
+    @Autowired
+    public OneTimePasswordService(OneTimePasswordRepository oneTimePasswordRepository) {
         this.oneTimePasswordRepository = oneTimePasswordRepository;
     }
 
