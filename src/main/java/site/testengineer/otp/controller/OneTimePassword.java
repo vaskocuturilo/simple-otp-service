@@ -1,8 +1,15 @@
 package site.testengineer.otp.controller;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.Date;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 public class OneTimePassword {
 
@@ -11,31 +18,4 @@ public class OneTimePassword {
     private Long id;
     private Integer oneTimePasswordCode;
     private Date expires;
-
-    public OneTimePassword() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Integer getOneTimePasswordCode() {
-        return oneTimePasswordCode;
-    }
-
-    public void setOneTimePasswordCode(Integer oneTimePasswordCode) {
-        this.oneTimePasswordCode = oneTimePasswordCode;
-    }
-
-    public Date getExpires() {
-        return expires;
-    }
-
-    public void setExpires(Date expires) {
-        this.expires = expires;
-    }
 }

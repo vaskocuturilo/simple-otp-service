@@ -1,6 +1,8 @@
 package site.testengineer.otp.controller;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface OneTimePasswordRepository extends JpaRepository<OneTimePassword, Long> {
+@Repository
+public interface OneTimePasswordRepository extends CrudRepository<OneTimePassword, Long> {
 }
