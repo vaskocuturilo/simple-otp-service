@@ -20,6 +20,8 @@ import site.testengineer.otp.service.OneTimePasswordService;
 public class OneTimePasswordController {
 
     private static final Logger logger = LoggerFactory.getLogger(OneTimePasswordController.class);
+    private static final String NEW_ONE_TIME_PASSWORD_CODE = "A new one time password oneTimePasswordCode:{}";
+    private static final String EXPIRE_DATA = "A new expires:{}";
 
     private OneTimePasswordService oneTimePAsswordService;
 
@@ -35,7 +37,9 @@ public class OneTimePasswordController {
     @GetMapping("/create")
     private Object getOneTimePassword() {
         try {
-            return ResponseEntity.ok(oneTimePAsswordService.returnOneTimePassword());
+            logger.info(NEW_ONE_TIME_PASSWORD_CODE, oneTimePAsswordService.returnOneTimePassword().getOneTimePasswordCode());
+            logger.info(EXPIRE_DATA, oneTimePAsswordService.returnOneTimePassword().getExpires());
+            return ResponseEntity.status(HttpStatus.CREATED).body(oneTimePAsswordService.returnOneTimePassword());
         } catch (Exception exception) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST);
         }
