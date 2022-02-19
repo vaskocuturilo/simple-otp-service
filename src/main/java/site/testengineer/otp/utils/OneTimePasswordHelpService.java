@@ -1,4 +1,4 @@
-package site.testengineer.otp.base;
+package site.testengineer.otp.utils;
 
 import java.util.Random;
 import java.util.function.Supplier;

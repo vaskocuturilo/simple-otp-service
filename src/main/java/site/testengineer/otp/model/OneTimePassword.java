@@ -1,4 +1,4 @@
-package site.testengineer.otp.controller;
+package site.testengineer.otp.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

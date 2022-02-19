@@ -2,9 +2,9 @@ package site.testengineer.otp.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import site.testengineer.otp.base.OneTimePasswordHelpService;
-import site.testengineer.otp.controller.OneTimePassword;
-import site.testengineer.otp.controller.OneTimePasswordRepository;
+import site.testengineer.otp.utils.OneTimePasswordHelpService;
+import site.testengineer.otp.model.OneTimePassword;
+import site.testengineer.otp.repository.OneTimePasswordRepository;
 
 import java.util.Date;
 
